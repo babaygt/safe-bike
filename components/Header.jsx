@@ -2,6 +2,7 @@ import Link from 'next/link'
 
 // components
 import Navigation from './Navigation'
+import MobileNav from './MobileNav'
 
 const Header = () => {
 	return (
@@ -16,6 +17,11 @@ const Header = () => {
 				{/* desktop nav */}
 				<div className='hidden xl:flex items-center gap-8'>
 					<Navigation />
+				</div>
+
+				{/* mobile nav */}
+				<div className='xl:hidden'>
+					<MobileNav />
 				</div>
 			</div>
 		</header>
