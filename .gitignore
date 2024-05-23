@@ -37,3 +37,7 @@ next-env.d.ts
 
 # api keys
 /settings
+
+
+# Ignore all .env files in the root of a project
+.env
