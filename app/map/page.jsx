@@ -10,7 +10,7 @@ import {
 
 import Directions from './components/Directions'
 import BikeLayer from './components/BikeLayer'
-import Autocomplete from './components/Autocomplete'
+import Autocomplete from './components/AutoComplete'
 
 import { Button } from '@/components/ui/button'
 import { Separator } from '@/components/ui/separator'
