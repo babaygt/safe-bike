@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState } from 'react'
+import { useState } from 'react'
 import {
 	APIProvider,
 	Map,
@@ -11,6 +11,8 @@ import {
 import Directions from './components/Directions'
 import BikeLayer from './components/BikeLayer'
 import Autocomplete from './components/AutoComplete'
+import Markers from './components/Markers'
+import InfoWindowArea from './components/InfoWindowArea'
 
 import { Button } from '@/components/ui/button'
 import { Separator } from '@/components/ui/separator'
@@ -20,16 +22,23 @@ import {
 	CollapsibleContent,
 	CollapsibleTrigger,
 } from '@/components/ui/collapsible'
+import { Checkbox } from '@/components/ui/checkbox'
 
 import { MoveRight, CircleX, ArrowRight, MousePointer } from 'lucide-react'
 
+import points from '../../data/points.json'
+
 const MapPage = () => {
-	const position = { lat: 52.49426795115615, lng: 13.446644826971113 }
+	const position = { lat: 52.540930926276566, lng: 13.424356814808915 }
 	const [routes, setRoutes] = useState([])
 	const [routeIndex, setRouteIndex] = useState(0)
 	const [origin, setOrigin] = useState(null)
 	const [destination, setDestination] = useState(null)
 	const [waypoints, setWaypoints] = useState([])
+	const [openMarkerKey, setOpenMarkerKey] = useState(null)
+	const [showBicycleStores, setShowBicycleStores] = useState(false)
+	const [showCrashes, setShowCrashes] = useState(false)
+	const [showConstructions, setShowConstructions] = useState(false)
 
 	const addWaypoint = () => {
 		setWaypoints([...waypoints, { location: null }])
@@ -49,6 +58,13 @@ const MapPage = () => {
 
 	const selected = routes[routeIndex]
 	const leg = selected?.legs[0]
+
+	const filteredPoints = points.filter((point) => {
+		if (point.type === 'Bicyclestore' && !showBicycleStores) return false
+		if (point.type === 'Crash' && !showCrashes) return false
+		if (point.type === 'Construction' && !showConstructions) return false
+		return true
+	})
 
 	return (
 		<section className='h-full'>
@@ -81,7 +97,7 @@ const MapPage = () => {
 									<Button
 										variant='outline'
 										onClick={addWaypoint}
-										className='mb-2 rounded-none'
+										className='mb-2 rounded-none w-[240px]'
 									>
 										Add Waypoint
 									</Button>
@@ -90,6 +106,36 @@ const MapPage = () => {
 										setPlace={setDestination}
 										placeholder='Enter destination'
 									/>
+
+									<Collapsible>
+										<CollapsibleTrigger className='text-left text-[#FFEA00] hover:text-[#b3a400]'>
+											<div className='flex justify-center items-center gap-2'>
+												<span className='text-base'>
+													Click here to see the points that may interest you
+												</span>
+												<MousePointer className='size-8' />
+											</div>
+										</CollapsibleTrigger>
+										<CollapsibleContent className='my-2'>
+											<div className='grid gap-2'>
+												<CheckboxWithLabel
+													label='Bicycle Stores'
+													checked={showBicycleStores}
+													onCheckedChange={setShowBicycleStores}
+												/>
+												<CheckboxWithLabel
+													label='Crashes'
+													checked={showCrashes}
+													onCheckedChange={setShowCrashes}
+												/>
+												<CheckboxWithLabel
+													label='Constructions'
+													checked={showConstructions}
+													onCheckedChange={setShowConstructions}
+												/>
+											</div>
+										</CollapsibleContent>
+									</Collapsible>
 								</div>
 
 								{leg && (
@@ -168,8 +214,10 @@ const MapPage = () => {
 										<Collapsible>
 											<CollapsibleTrigger className='text-left text-[#FFEA00] hover:text-[#b3a400]'>
 												<div className='flex justify-center items-center gap-2'>
-													<span>Click here to see the route instructions</span>
-													<MousePointer className='size-8' />
+													<span className='text-base'>
+														Click here to see the route instructions
+													</span>
+													<MousePointer className='size-6' />
 												</div>
 											</CollapsibleTrigger>
 											<CollapsibleContent>
@@ -235,6 +283,19 @@ const MapPage = () => {
 								/>
 
 								<BikeLayer />
+
+								<Markers
+									points={filteredPoints}
+									setOpenMarkerKey={setOpenMarkerKey}
+								/>
+
+								{openMarkerKey && (
+									<InfoWindowArea
+										points={points}
+										openMarkerKey={openMarkerKey}
+										setOpenMarkerKey={setOpenMarkerKey}
+									/>
+								)}
 							</Map>
 						</div>
 					</div>
@@ -259,5 +320,19 @@ const AutocompleteWrapper = ({ setPlace, placeholder }) => {
 		/>
 	)
 }
+
+const CheckboxWithLabel = ({ label, checked, onCheckedChange }) => (
+	<div className='items-top flex space-x-2 items-center'>
+		<Checkbox id={label} checked={checked} onCheckedChange={onCheckedChange} />
+		<div className='grid gap-1.5 leading-none'>
+			<label
+				htmlFor={label}
+				className='text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70'
+			>
+				{label}
+			</label>
+		</div>
+	</div>
+)
 
 export default MapPage

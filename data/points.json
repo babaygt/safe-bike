@@ -1,0 +1,186 @@
+[
+	{
+		"name": "VELOBANDE Bikes & Coffee",
+		"lat": 52.53994388853482,
+		"lng": 13.425014879588694,
+		"key": "10001",
+		"info": "Website: https://velobande.de",
+		"type": "Bicyclestore"
+	},
+	{
+		"name": "Wheel of the city Bicycles GmbH",
+		"lat": 52.537731693179275,
+		"lng": 13.423802448109013,
+		"key": "10002",
+		"info": "Website: https://radderstadt.de/",
+		"type": "Bicyclestore"
+	},
+	{
+		"name": "Little John Bikes",
+		"lat": 52.54545562151488,
+		"lng": 13.426631910172611,
+		"key": "10003",
+		"info": "Website: https://termine.littlejohnbikes.de",
+		"type": "Bicyclestore"
+	},
+	{
+		"name": "Fahrradladen Spurtreu",
+		"lat": 52.541174741601075,
+		"lng": 13.421881410703916,
+		"key": "10004",
+		"info": "Website: http://www.spurtreu-berlin.de/",
+		"type": "Bicyclestore"
+	},
+	{
+		"name": "Wulf Fahrradladen",
+		"lat": 52.54893696659254,
+		"lng": 13.411100528050468,
+		"key": "10005",
+		"info": "Website: http://fahrradladen-wulf.de/",
+		"type": "Bicyclestore"
+	},
+	{
+		"name": "Family Rad GmbH",
+		"lat": 52.535519334028535,
+		"lng": 13.421448080764613,
+		"key": "10006",
+		"info": "Website: https://familien-rad.de/",
+		"type": "Bicyclestore"
+	},
+	{
+		"name": "Bike Piraten",
+		"lat": 52.53980237483991,
+		"lng": 13.41285360305226,
+		"key": "10007",
+		"info": "Phone number: 0160 1037581",
+		"type": "Bicyclestore"
+	},
+	{
+		"name": "du und ich Fahrradladen Sachte GmbH",
+		"lat": 52.54368044286634,
+		"lng": 13.44137173171454,
+		"key": "10008",
+		"info": "Website: https://duundich-bikes.de/",
+		"type": "Bicyclestore"
+	},
+	{
+		"name": "Zweirad-Center Stadler Berlin Prenzlauer Berg GmbH",
+		"lat": 52.5221960780425,
+		"lng": 13.463880337753801,
+		"key": "10009",
+		"info": "Website: https://shop.zweirad-stadler.de",
+		"type": "Bicyclestore"
+	},
+	{
+		"name": "VELOBANDE Bikes & Ice Cream",
+		"lat": 52.54145333752141,
+		"lng": 13.41817166310355,
+		"key": "10010",
+		"info": "Website: http://velobande.de/",
+		"type": "Bicyclestore"
+	},
+	{
+		"name": "Fahrrad Görke",
+		"lat": 52.52888284411064,
+		"lng": 13.449470810521182,
+		"key": "10011",
+		"info": "Website: http://www.fahrrad-goerke.de/",
+		"type": "Bicyclestore"
+	},
+	{
+		"name": "Fahrradschmiede.Berlin",
+		"lat": 52.54822793203481,
+		"lng": 13.428539815542337,
+		"key": "10012",
+		"info": "Website: http://www.fahrradschmiede.berlin/",
+		"type": "Bicyclestore"
+	},
+	{
+		"name": "Bike Doctor Berlin Inh. Timo Henschke",
+		"lat": 52.54520060705149,
+		"lng": 13.429397379331427,
+		"key": "10013",
+		"info": "Website: http://www.bikedoctor-berlin.de/",
+		"type": "Bicyclestore"
+	},
+	{
+		"name": "Cicli Berlinetta Home of Cycling Chic",
+		"lat": 52.55084652837543,
+		"lng": 13.40819587110445,
+		"key": "10014",
+		"info": "Website: https://cicli-berlinetta.com/",
+		"type": "Bicyclestore"
+	},
+	{
+		"name": "Fahrradladen RSG",
+		"lat": 52.54402192592,
+		"lng": 13.417598491349663,
+		"key": "10015",
+		"info": "Website: http://www.spezialrad.de/",
+		"type": "Bicyclestore"
+	},
+	{
+		"name": "Fahrradladen Luft & Liebe",
+		"lat": 52.53506716642757,
+		"lng": 13.437160541165337,
+		"key": "10016",
+		"info": "Phone number: 030 97983050",
+		"type": "Bicyclestore"
+	},
+	{
+		"name": "fahrradkoppel",
+		"lat": 52.532913876672986,
+		"lng": 13.43134521393878,
+		"key": "10017",
+		"info": "Website: http://www.fahrradkoppel.de/",
+		"type": "Bicyclestore"
+	},
+	{
+		"name": "Santucci Cycles",
+		"lat": 52.540266762734575,
+		"lng": 13.420806480659678,
+		"key": "10018",
+		"info": "Website: http://santucci-cycles.com/",
+		"type": "Bicyclestore"
+	},
+	{
+		"name": "Construction 1",
+		"lat": 52.545421033710625,
+		"lng": 13.423394379018108,
+		"key": "10019",
+		"info": "There is a construction site here",
+		"type": "Construction"
+	},
+	{
+		"name": "Construction 2",
+		"lat": 52.54932201077204,
+		"lng": 13.434432086081808,
+		"key": "10020",
+		"info": "There is a construction site here",
+		"type": "Construction"
+	},
+	{
+		"name": "Construction 3",
+		"lat": 52.53638830109264,
+		"lng": 13.435113831265337,
+		"key": "10021",
+		"info": "There is a construction site here",
+		"type": "Construction"
+	},
+	{
+		"name": "Crash 1",
+		"lat": 52.54991369975754,
+		"lng": 13.429879810071597,
+		"key": "10022",
+		"info": "There was a crash here",
+		"type": "Crash"
+	},
+	{
+		"name": "Crash 2",
+		"lat": 52.53406184623731,
+		"lng": 13.444286010300951,
+		"key": "10023",
+		"info": "There was a crash here",
+		"type": "Crash"
+	}
+]
