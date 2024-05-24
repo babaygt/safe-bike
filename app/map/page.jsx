@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import {
 	APIProvider,
 	Map,
@@ -15,8 +15,13 @@ import Autocomplete from './components/AutoComplete'
 import { Button } from '@/components/ui/button'
 import { Separator } from '@/components/ui/separator'
 import { ScrollArea } from '@/components/ui/scroll-area'
+import {
+	Collapsible,
+	CollapsibleContent,
+	CollapsibleTrigger,
+} from '@/components/ui/collapsible'
 
-import { MoveRight, CircleX, ArrowRight } from 'lucide-react'
+import { MoveRight, CircleX, ArrowRight, MousePointer } from 'lucide-react'
 
 const MapPage = () => {
 	const position = { lat: 52.49426795115615, lng: 13.446644826971113 }
@@ -49,22 +54,18 @@ const MapPage = () => {
 		<section className='h-full'>
 			<div className='container mx-auto h-full'>
 				<APIProvider apiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}>
-					<div className='flex flex-row'>
-						<ScrollArea className='h-[600px] w-[350px] p-4'>
-							<div className='basis-1/4 text-accent mx-4'>
-								<div className='mb-4 flex flex-col justify-center item-center '>
+					<div className='flex flex-col lg:flex-row'>
+						<ScrollArea className=' lg:h-[600px] w-full lg:w-[350px] p-4'>
+							<div className='text-accent mx-4'>
+								<div className='mb-4 flex flex-col justify-center items-center'>
 									<AutocompleteWrapper
 										setPlace={setOrigin}
 										placeholder='Enter origin'
 									/>
-									<AutocompleteWrapper
-										setPlace={setDestination}
-										placeholder='Enter destination'
-									/>
 									{waypoints.map((_, index) => (
 										<div
 											key={index}
-											className='flex items-center justify-center gap-2'
+											className='flex w-[240px] items-center justify-center gap-2 my-2'
 										>
 											<AutocompleteWrapper
 												setPlace={(place) => updateWaypoint(index, place)}
@@ -80,10 +81,15 @@ const MapPage = () => {
 									<Button
 										variant='outline'
 										onClick={addWaypoint}
-										className='mt-2'
+										className='mb-2 rounded-none'
 									>
 										Add Waypoint
 									</Button>
+
+									<AutocompleteWrapper
+										setPlace={setDestination}
+										placeholder='Enter destination'
+									/>
 								</div>
 
 								{leg && (
@@ -95,7 +101,7 @@ const MapPage = () => {
 												{selected.legs[0].start_address.split(',')[0]}
 											</span>{' '}
 											to{' '}
-											<span className='text-accent '>
+											<span className='text-accent'>
 												{
 													selected.legs[
 														selected.legs.length - 1
@@ -146,12 +152,12 @@ const MapPage = () => {
 										<Separator />
 										<ul>
 											{routes.map((route, index) => (
-												<li className='' key={route.summary}>
+												<li key={route.summary}>
 													<button
-														className='hover:text-white '
+														className='hover:text-white'
 														onClick={() => setRouteIndex(index)}
 													>
-														<div className='flex flex-column justify-center items-center gap-2'>
+														<div className='flex text-[#FFEA00] hover:text-[#b3a400] flex-column justify-center items-center gap-2'>
 															Option {index + 1} <MoveRight />
 														</div>
 													</button>
@@ -159,44 +165,56 @@ const MapPage = () => {
 											))}
 										</ul>
 										<Separator />
-										{selected.legs.map((leg, legIndex) => (
-											<div key={legIndex}>
-												<p className='text-md  text-white font-semibold'>
-													Here is the instructions for the route from{' '}
-													<span className='text-accent font-semibold'>
-														{leg.start_address} {'  '}
-													</span>
-													to
-													<span className='text-accent font-semibold'>
-														{'  '} {leg.end_address}
-													</span>
-												</p>
-												{leg.steps.map((step, stepIndex) => (
-													<div
-														key={stepIndex}
-														className='flex gap-4 items-start my-2'
-													>
-														<ArrowRight classaName='mt-1' />
-														<div>
+										<Collapsible>
+											<CollapsibleTrigger className='text-left text-[#FFEA00] hover:text-[#b3a400]'>
+												<div className='flex justify-center items-center gap-2'>
+													<span>Click here to see the route instructions</span>
+													<MousePointer className='size-8' />
+												</div>
+											</CollapsibleTrigger>
+											<CollapsibleContent>
+												{selected.legs.map((leg, legIndex) => (
+													<div key={legIndex}>
+														<p className='text-md text-white font-semibold'>
+															Here are the instructions for the route from{' '}
+															<span className='text-accent font-semibold'>
+																{leg.start_address}{' '}
+															</span>
+															to
+															<span className='text-accent font-semibold'>
+																{' '}
+																{leg.end_address}
+															</span>
+														</p>
+
+														{leg.steps.map((step, stepIndex) => (
 															<div
-																className='text-sm text-white'
-																dangerouslySetInnerHTML={{
-																	__html: step.instructions,
-																}}
-															/>
-															<p className='text-sm text-white/65'>
-																{step.distance.text}
-															</p>
-														</div>
+																key={stepIndex}
+																className='flex gap-4 items-start my-2'
+															>
+																<ArrowRight />
+																<div>
+																	<div
+																		className='text-sm text-white'
+																		dangerouslySetInnerHTML={{
+																			__html: step.instructions,
+																		}}
+																	/>
+																	<p className='text-sm text-white/65'>
+																		{step.distance.text}
+																	</p>
+																</div>
+															</div>
+														))}
 													</div>
 												))}
-											</div>
-										))}
+											</CollapsibleContent>
+										</Collapsible>
 									</div>
 								)}
 							</div>
 						</ScrollArea>
-						<div className='basis-3/4 h-[80vh]'>
+						<div className='h-[50vh] lg:h-[80vh] w-full lg:w-3/4'>
 							<Map
 								defaultZoom={15}
 								defaultCenter={position}
