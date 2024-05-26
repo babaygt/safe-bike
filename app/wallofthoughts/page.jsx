@@ -1,18 +1,8 @@
 'use client'
 import { useState } from 'react'
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { Input } from '@/components/ui/input'
-import { Button } from '@/components/ui/button'
+import { CardHeader, } from '@/components/ui/card'
 import { useUserNotes } from '@/hooks/useUserNotes'
-
-import { Reenie_Beanie, Patrick_Hand } from 'next/font/google'
-
-const reninie = Reenie_Beanie({
-	weight: ['400'],
-	subsets: ['latin'],
-})
-
-const patrick = Patrick_Hand({ weight: ['400'], subsets: ['latin'] })
+import * as Styles from '../../styles/wallofthoughts.styles'
 
 // Define an array of Tailwind CSS background color classes
 const colors = [
@@ -23,7 +13,6 @@ const colors = [
 	'bg-purple-200',
 	'bg-pink-200',
 ]
-
 // Define an array of Tailwind CSS rotate classes
 const rotate = ['-2deg', '2deg', '-4deg', '4deg', '-6deg', '6deg']
 
@@ -47,75 +36,64 @@ const WallOfThoughts = () => {
 
 	return (
 		<div className='p-8'>
-			<h1
-				className={`text-4xl text-center mb-8 tracking-wider ${patrick.className}`}
-			>
-				Your thoughts are very important to us. Please share them with us.
-			</h1>
-			<ul className='flex flex-wrap justify-center'>
-				<li className='m-4'>
-					<Card
-						className={`w-64 h-[23rem] transform rotate-2 shadow-lg hover:scale-105 transition-transform duration-200 ${selectedColor}`}
-					>
+			<Styles.PrimaryHeader>
+				Your thoughts are very important to us. Please share them with us
+			</Styles.PrimaryHeader>
+			<Styles.NotesContainer>
+				<Styles.NotesChild>
+					<Styles.Card color={selectedColor}>
 						<CardHeader>
-							<CardTitle
-								className={`text-base tracking-wider ${patrick.className}`}
-							>
-								Share your own thought with us
-							</CardTitle>
+							<Styles.CardTitle>
+									Share your own thought with us
+							</Styles.CardTitle>
 						</CardHeader>
-						<CardContent className='flex flex-col items-center text-white'>
-							<Input
+						<Styles.CardForm>
+							<Styles.InputTitle
 								placeholder='Title'
 								value={form.title || ''}
 								onChange={(e) => setChanged('title', e)}
-								className={`mb-4 tracking-wider ${patrick.className}`}
-							></Input>
-							<Input
+							></Styles.InputTitle>
+							<Styles.InputOpinion
 								placeholder='Your opinion'
 								value={form.detail || ''}
 								onChange={(e) => setChanged('detail', e)}
-								className={`h-14 mb-4 text-2xl ${reninie.className}`}
-							></Input>
-							<div className='flex space-x-2 mb-4 bg-black p-3 rounded-md'>
+							></Styles.InputOpinion>
+							<Styles.ColorPicker>
 								{colors.map((color, idx) => (
-									<div
+									<Styles.Color
 										key={idx}
-										className={`w-6 h-6 rounded-full cursor-pointer ${color}`}
+										color={color}
 										onClick={() => setSelectedColor(color)}
 									/>
 								))}
-							</div>
-							<Button
+							</Styles.ColorPicker>
+							<Styles.Submit
 								type='submit'
 								onClick={submit}
-								className='bg-green-500 text-white mt-2 hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75'
 							>
 								Submit
-							</Button>
-						</CardContent>
-					</Card>
-				</li>
+							</Styles.Submit>
+						</Styles.CardForm>
+					</Styles.Card>
+				</Styles.NotesChild>
 				{userNotes?.map((note, index) => (
-					<li key={note.id} className='m-4'>
-						<Card
-							className={`w-64 h-[23rem] transform shadow-lg hover:scale-105 transition-transform duration-200 ${
-								note.color || 'bg-yellow-200'
-							}`}
+					<Styles.NotesChild key={note.id}>
+						<Styles.Card
+						  color={note.color}
 							style={{ rotate: rotate[index % rotate.length] }}
 						>
 							<CardHeader>
-								<CardTitle className={`tracking-wider ${patrick.className}`}>
+								<Styles.CardTitle>
 									{note.title}
-								</CardTitle>
+								</Styles.CardTitle>
 							</CardHeader>
-							<CardContent>
-								<p className={`text-2xl ${reninie.className}`}>{note.detail}</p>
-							</CardContent>
-						</Card>
-					</li>
+							<Styles.CardContent>
+								<p>{note.detail}</p>
+							</Styles.CardContent>
+						</Styles.Card>
+					</Styles.NotesChild>
 				))}
-			</ul>
+			</Styles.NotesContainer>
 		</div>
 	)
 }
