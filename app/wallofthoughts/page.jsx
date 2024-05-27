@@ -39,9 +39,9 @@ const WallOfThoughts = () => {
 			<Styles.PrimaryHeader>
 				Your thoughts are very important to us. Please share them with us
 			</Styles.PrimaryHeader>
-			<Styles.NotesContainer>
+			<Styles.NotesContainer className='flex-wrap'>
 				<Styles.NotesChild>
-					<Styles.Card color={selectedColor}>
+					<Styles.Card color={selectedColor} className="h-[23rem]">
 						<CardHeader>
 							<Styles.CardTitle>
 									Share your own thought with us
@@ -58,10 +58,13 @@ const WallOfThoughts = () => {
 								value={form.detail || ''}
 								onChange={(e) => setChanged('detail', e)}
 							></Styles.InputOpinion>
-							<Styles.ColorPicker>
+							<Styles.ColorPicker
+								className="space-x-2 mb-4 bg-black p-3 rounded-md"
+							>
 								{colors.map((color, idx) => (
 									<Styles.Color
 										key={idx}
+										className="w-6 h-6 rounded-full cursor-pointer"
 										color={color}
 										onClick={() => setSelectedColor(color)}
 									/>
@@ -69,6 +72,7 @@ const WallOfThoughts = () => {
 							</Styles.ColorPicker>
 							<Styles.Submit
 								type='submit'
+								className="bg-green-500 hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75"
 								onClick={submit}
 							>
 								Submit
@@ -79,6 +83,7 @@ const WallOfThoughts = () => {
 				{userNotes?.map((note, index) => (
 					<Styles.NotesChild key={note.id}>
 						<Styles.Card
+						  className="h-[23rem]"
 						  color={note.color}
 							style={{ rotate: rotate[index % rotate.length] }}
 						>
