@@ -1,7 +1,12 @@
 import { JetBrains_Mono } from 'next/font/google'
 import './globals.css'
 import Header from '@/components/Header'
+<<<<<<< HEAD
 import { Toaster } from '@/components/ui/toaster'
+=======
+import '@radix-ui/themes/styles.css';
+import { Theme } from '@radix-ui/themes';
+>>>>>>> 1cba017 (Homepage)
 
 const jetbrainsMono = JetBrains_Mono({
 	subsets: ['latin'],
@@ -22,8 +27,15 @@ export default function RootLayout({ children }) {
 			</head>
 			<body className={jetbrainsMono.variable}>
 				<Header />
+<<<<<<< HEAD
 				{children}
 				<Toaster />
+=======
+				<Theme>
+					{children}
+				</Theme>
+				
+>>>>>>> 1cba017 (Homepage)
 			</body>
 		</html>
 	)
