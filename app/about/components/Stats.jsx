@@ -21,7 +21,7 @@ const Stats = () => {
 					{stats.map((item, index) => {
 						return (
 							<div
-								className='flex-1 flex gap-4 items-center justify-center xl:justify-start bg-[#27272c] p-3 rounded-lg hover:scale-110 hover:transition-all ease-in-out duration-500'
+								className='flex-1 flex gap-4 items-center justify-center xl:justify-start bg-[#27272c] p-3 rounded-lg md:hover:scale-[1.03] xl:hover:scale-110 hover:transition-all ease-in-out duration-500'
 								key={index}
 							>
 								<div>

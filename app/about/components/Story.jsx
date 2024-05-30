@@ -4,7 +4,7 @@ import Title from './Title'
 
 const Story = () => {
 	return (
-		<div className='p-6 lg:p-8 xl:p-10 bg-[#27272c] rounded-xl hover:scale-110 hover:transition-all ease-in-out duration-500'>
+		<div className='p-6 lg:p-8 xl:p-10 bg-[#27272c] rounded-xl md:hover:scale-[1.03] xl:hover:scale-110 hover:transition-all ease-in-out duration-500'>
 			<Title
 				text='Our Story'
 				position='left'

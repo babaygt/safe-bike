@@ -1,6 +1,6 @@
 const OurVision = () => {
 	return (
-		<div className=' rounded-xl pt-4 pb-12 xl:pt-8 xl:pb-24 hover:scale-110 hover:transition-all ease-in-out duration-500'>
+		<div className=' rounded-xl pt-4 pb-12 xl:pt-8 xl:pb-24 md:hover:scale-[1.03] xl:hover:scale-110 hover:transition-all ease-in-out duration-500'>
 			<p className='text-lg p-3 bg-[#27272c] rounded-xl'>
 				We envision a future where cycling in Prenzlauer Berg is not only{' '}
 				<span className='text-accent'>safe</span> but also a{' '}
