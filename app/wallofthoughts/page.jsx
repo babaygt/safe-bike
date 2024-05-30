@@ -39,8 +39,8 @@ const WallOfThoughts = () => {
 			<Styles.PrimaryHeader>
 				Your thoughts are very important to us. Please share them with us
 			</Styles.PrimaryHeader>
-			<Styles.NotesContainer className='flex-wrap'>
-				<Styles.NotesChild>
+			<Styles.NotesContainer className='flex-wrap m-4'>
+				<Styles.NotesChild className="">
 					<Styles.Card color={selectedColor} className="h-[23rem]">
 						<CardHeader>
 							<Styles.CardTitle>
