@@ -16,14 +16,14 @@ const members = [
 	{
 		name: 'Yigit Baba',
 		role: 'Software Developer',
-		img: '/assets/images/team/yigit.png ',
+		img: '/assets/images/team/yigit.png',
 		email: 'yigit.baba@code.berlin',
 		linkedin: 'https://www.linkedin.com/in/yigitbaba/',
 	},
 	{
 		name: 'Shawn Gotoh',
 		role: 'Software Developer',
-		img: '/assets/images/team/shawn.png ',
+		img: '/assets/images/team/shawn.png',
 		email: 'shawn.gotoh@code.berlin',
 		linkedin: 'https://www.linkedin.com',
 	},
