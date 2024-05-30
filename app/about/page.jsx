@@ -6,6 +6,7 @@ import Mission from './components/Mission'
 import OurVision from './components/OurVision'
 import Research from './components/Research'
 import SafeBikeApp from './components/SafeBikeApp'
+import SafeBikePhoneHolder from './components/SafeBikePhoneHolder'
 import SafeBikeWebsite from './components/SafeBikeWebsite'
 import Stats from './components/Stats'
 import Story from './components/Story'
@@ -45,6 +46,7 @@ const About = () => {
 					/>
 					<SafeBikeWebsite />
 					<SafeBikeApp />
+					<SafeBikePhoneHolder />
 				</section>
 
 				{/** Our Research */}
