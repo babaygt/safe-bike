@@ -85,7 +85,7 @@ export default function Home() {
 		<div>
 			<section className='container mx-auto py-20 min-h-screen'>
 				<Separator className='bg-accent' />
-				<div className='w-full text-center '>
+				<div className='w-full text-center'>
 					<TypeAnimation
 						sequence={[
 							500,
@@ -103,11 +103,7 @@ export default function Home() {
 						wrapper='span'
 						cursor={true}
 						repeat={Infinity}
-						style={{
-							fontSize: '3em',
-							display: 'block',
-							color: '#00ff99',
-						}}
+						className='type-animation'
 					/>
 				</div>
 				<Separator className='bg-accent' />
