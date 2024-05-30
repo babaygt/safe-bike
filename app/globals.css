@@ -7,3 +7,32 @@
 		@apply font-primary bg-primary text-white leading-loose;
 	}
 }
+
+/* styles.css */
+
+.type-animation {
+	font-size: 1.5em;
+	display: block;
+	color: #00ff99;
+	height: 3.6em; /* Default height for small screens */
+}
+
+@media (min-width: 768px) {
+	.type-animation {
+		font-size: 2em; /* Medium screens */
+		height: 3em;
+	}
+}
+
+@media (min-width: 960px) {
+	.type-animation {
+		font-size: 2.5em; /* Large screens */
+		height: 2em;
+	}
+}
+
+@media (min-width: 1200px) {
+	.type-animation {
+		font-size: 2em; /* Extra large screens */
+	}
+}
