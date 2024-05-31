@@ -23,7 +23,7 @@ const Directions = ({
 			new routesLibrary.DirectionsRenderer({
 				map,
 				polylineOptions: {
-					strokeColor: '#FFEA00',
+					strokeColor: '#66BCFD',
 					strokeOpacity: 0.9,
 					strokeWeight: 6,
 				},
