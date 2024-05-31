@@ -18,7 +18,7 @@ const SafeBikePhoneHolder = () => {
 			<div className='flex flex-col lg:flex-row items-center justify-center gap-8 xl:pt-8 xl:pb-24'>
 				<div className='w-full xl:w-1/2'>
 					<div className='flex'>
-						<div className='bg-[#232329] h-auto  py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1 hover:scale-110 hover:transition-all ease-in-out duration-500'>
+						<div className='bg-[#232329] h-auto  py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1 md:hover:scale-[1.03] xl:hover:scale-110 hover:transition-all ease-in-out duration-500'>
 							<span className='text-[#FFEA00] font-bold'>Purpose</span>
 							<p className='text-white'>
 								The Safe Bike Phone Holder is a{' '}
@@ -35,7 +35,7 @@ const SafeBikePhoneHolder = () => {
 				</div>
 
 				<div className='w-full xl:w-1/2 px-6'>
-					<div className='relative w-full h-full hover:scale-110 hover:transition-all ease-in-out duration-500'>
+					<div className='relative w-full h-full md:hover:scale-[1.03] xl:hover:scale-110 hover:transition-all ease-in-out duration-500'>
 						<Image
 							src='/assets/images/phone-holder/holder-1.jpg'
 							priority
@@ -52,7 +52,7 @@ const SafeBikePhoneHolder = () => {
 
 			<div className='flex flex-col lg:flex-row items-center justify-center gap-8 xl:pt-8 xl:pb-24'>
 				<div className='w-full order-2 lg:order-1 xl:w-1/2 px-6'>
-					<div className='relative w-full h-full hover:scale-110 hover:transition-all ease-in-out duration-500'>
+					<div className='relative w-full h-full md:hover:scale-[1.03] xl:hover:scale-110 hover:transition-all ease-in-out duration-500'>
 						<Image
 							src='/assets/images/phone-holder/holder-2.JPG'
 							priority
@@ -65,7 +65,7 @@ const SafeBikePhoneHolder = () => {
 				</div>
 				<div className='w-full xl:w-1/2 order-1 lg:order-2'>
 					<div className='grid grid-cols-1 gap-[30px]'>
-						<div className='bg-[#232329] h-auto  py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1 hover:scale-110 hover:transition-all ease-in-out duration-500'>
+						<div className='bg-[#232329] h-auto  py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1 md:hover:scale-[1.03] xl:hover:scale-110 hover:transition-all ease-in-out duration-500'>
 							<span className='text-[#FFEA00] font-bold'>Description</span>
 							<p className='text-white'>
 								The primary purpose of the Safe Bike phone holder is to provide

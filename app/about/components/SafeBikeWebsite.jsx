@@ -24,7 +24,7 @@ const SafeBikeWebsite = () => {
 			<div className='flex flex-col lg:flex-row items-center justify-center gap-8 xl:pt-8 xl:pb-24'>
 				<div className='w-full xl:w-1/2'>
 					<ul className='grid grid-cols-1 gap-[30px]'>
-						<li className='bg-[#232329] h-auto xl:h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1 hover:scale-110 hover:transition-all ease-in-out duration-500'>
+						<li className='bg-[#232329] h-auto xl:h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1 md:hover:scale-[1.03] xl:hover:scale-110 hover:transition-all ease-in-out duration-500'>
 							<span className='text-[#FFEA00] font-bold'>Route Creation</span>
 							<p className='text-white'>
 								Users can create{' '}
@@ -33,7 +33,7 @@ const SafeBikeWebsite = () => {
 								<span className='text-accent'>preferences and needs</span>.
 							</p>
 						</li>
-						<li className='bg-[#232329] h-auto xl:h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1 hover:scale-110 hover:transition-all ease-in-out duration-500'>
+						<li className='bg-[#232329] h-auto xl:h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1 md:hover:scale-[1.03] xl:hover:scale-110 hover:transition-all ease-in-out duration-500'>
 							<span className='text-[#FFEA00] font-bold'>Safety Features</span>
 							<p className='text-white'>
 								The map highlights{' '}
@@ -44,7 +44,7 @@ const SafeBikeWebsite = () => {
 								<span className='text-accent'>potential hazards</span>.
 							</p>
 						</li>
-						<li className='bg-[#232329] h-auto xl:h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1 hover:scale-110 hover:transition-all ease-in-out duration-500'>
+						<li className='bg-[#232329] h-auto xl:h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1 md:hover:scale-[1.03] xl:hover:scale-110 hover:transition-all ease-in-out duration-500'>
 							<span className='text-[#FFEA00] font-bold'>
 								Real-Time Updates
 							</span>
@@ -59,7 +59,7 @@ const SafeBikeWebsite = () => {
 				</div>
 
 				<div className='w-full xl:w-1/2  px-6'>
-					<div className='relative w-full h-full hover:scale-110 hover:transition-all ease-in-out duration-500'>
+					<div className='relative w-full h-full md:hover:scale-[1.03] xl:hover:scale-110 hover:transition-all ease-in-out duration-500'>
 						<Image
 							src='/assets/images/website/website-safebike-map-1.png'
 							priority
@@ -81,7 +81,7 @@ const SafeBikeWebsite = () => {
 
 			<div className='flex flex-col lg:flex-row items-center justify-center gap-8 xl:pt-8 xl:pb-24'>
 				<div className='w-full order-2 lg:order-1  xl:w-1/2   px-6'>
-					<div className='relative w-full h-full hover:scale-110 hover:transition-all ease-in-out duration-500'>
+					<div className='relative w-full h-full md:hover:scale-[1.03] xl:hover:scale-110 hover:transition-all ease-in-out duration-500'>
 						<Image
 							src='/assets/images/website/website-wallofthoughts-1.png'
 							priority
@@ -94,7 +94,7 @@ const SafeBikeWebsite = () => {
 				</div>
 				<div className='w-full xl:w-1/2 order-1 lg:order-2 '>
 					<ul className='grid grid-cols-1 gap-[30px]'>
-						<li className='bg-[#232329] h-auto xl:h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1 hover:scale-110 hover:transition-all ease-in-out duration-500'>
+						<li className='bg-[#232329] h-auto xl:h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1 md:hover:scale-[1.03] xl:hover:scale-110 hover:transition-all ease-in-out duration-500'>
 							<span className='text-[#FFEA00] font-bold'>
 								Community Engagement
 							</span>
@@ -105,7 +105,7 @@ const SafeBikeWebsite = () => {
 								<span className='text-accent'>experiences</span>.
 							</p>
 						</li>
-						<li className='bg-[#232329] h-auto xl:h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1 hover:scale-110 hover:transition-all ease-in-out duration-500'>
+						<li className='bg-[#232329] h-auto xl:h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1 md:hover:scale-[1.03] xl:hover:scale-110 hover:transition-all ease-in-out duration-500'>
 							<span className='text-[#FFEA00] font-bold'>
 								Feedback Integration
 							</span>
@@ -116,7 +116,7 @@ const SafeBikeWebsite = () => {
 								continuously.
 							</p>
 						</li>
-						<li className='bg-[#232329] h-auto xl:h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1 hover:scale-110 hover:transition-all ease-in-out duration-500'>
+						<li className='bg-[#232329] h-auto xl:h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1 md:hover:scale-[1.03] xl:hover:scale-110 hover:transition-all ease-in-out duration-500'>
 							<span className='text-[#FFEA00] font-bold'>Open Discussion</span>
 							<p className='text-white'>
 								Encourage <span className='text-accent'>open discussions</span>{' '}

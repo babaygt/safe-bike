@@ -46,7 +46,7 @@ const members = [
 const Team = () => {
 	return (
 		<div className=' pt-4 pb-12 xl:pt-8 xl:pb-24'>
-			<div className='pb-12 hover:scale-110 hover:transition-all ease-in-out duration-500'>
+			<div className='pb-12 md:hover:scale-[1.03] xl:hover:scale-110 hover:transition-all ease-in-out duration-500'>
 				<p className='text-lg p-3 bg-[#27272c] rounded-xl'>
 					Safe Bike is driven by a team of{' '}
 					<span className='text-accent'>dedicated professionals</span>: three{' '}
@@ -76,7 +76,7 @@ const Team = () => {
 				{members.map((member, index) => (
 					<div
 						key={index}
-						className='w-full flex flex-col items-center gap-4 h-auto p-3 bg-[#232329] rounded-lg shadow-lg overflow-hidden hover:scale-110 hover:transition-all ease-in-out duration-500'
+						className='w-full flex flex-col items-center gap-4 h-auto p-3 bg-[#232329] rounded-lg shadow-lg overflow-hidden md:hover:scale-[1.03] xl:hover:scale-110 hover:transition-all ease-in-out duration-500'
 					>
 						<div className='w-full h-auto flex flex-col items-center p-3'>
 							<Image

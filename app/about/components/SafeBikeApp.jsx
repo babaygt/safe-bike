@@ -72,7 +72,7 @@ const SafeBikeApp = () => {
 						{group1.map((feature, index) => (
 							<li
 								key={index}
-								className='bg-[#232329] h-auto xl:h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1 hover:scale-110 hover:transition-all ease-in-out duration-500'
+								className='bg-[#232329] h-auto xl:h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1 md:hover:scale-[1.03] xl:hover:scale-110 hover:transition-all ease-in-out duration-500'
 							>
 								<span className='text-[#FFEA00] font-bold'>
 									{feature.title}
@@ -83,7 +83,7 @@ const SafeBikeApp = () => {
 					</ul>
 				</div>
 				<div className='w-full xl:w-1/2  px-6'>
-					<div className='relative w-full h-full hover:scale-110 hover:transition-all ease-in-out duration-500'>
+					<div className='relative w-full h-full md:hover:scale-[1.03] xl:hover:scale-110 hover:transition-all ease-in-out duration-500'>
 						<Image
 							src='/assets/images/mobile-app/safe-bike-app-1.png'
 							priority
@@ -106,7 +106,7 @@ const SafeBikeApp = () => {
 
 			<div className='flex flex-col md:flex-row items-center justify-center gap-8 xl:pt-8 xl:pb-24'>
 				<div className='w-full order-2 lg:order-1  xl:w-1/2   px-6'>
-					<div className='relative w-full h-full hover:scale-110 hover:transition-all ease-in-out duration-500'>
+					<div className='relative w-full h-full md:hover:scale-[1.03] xl:hover:scale-110 hover:transition-all ease-in-out duration-500'>
 						<Image
 							src='/assets/images/mobile-app/safe-bike-app-2.png'
 							priority
@@ -122,7 +122,7 @@ const SafeBikeApp = () => {
 						{group2.map((feature, index) => (
 							<li
 								key={index}
-								className='bg-[#232329] h-auto xl:h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1 hover:scale-110 hover:transition-all ease-in-out duration-500'
+								className='bg-[#232329] h-auto xl:h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1 md:hover:scale-[1.03] xl:hover:scale-110 hover:transition-all ease-in-out duration-500'
 							>
 								<span className='text-[#FFEA00] font-bold'>
 									{feature.title}
@@ -147,7 +147,7 @@ const SafeBikeApp = () => {
 						{group3.map((feature, index) => (
 							<li
 								key={index}
-								className='bg-[#232329] h-auto xl:h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1 hover:scale-110 hover:transition-all ease-in-out duration-500'
+								className='bg-[#232329] h-auto xl:h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1 md:hover:scale-[1.03] xl:hover:scale-110 hover:transition-all ease-in-out duration-500'
 							>
 								<span className='text-[#FFEA00] font-bold'>
 									{feature.title}
@@ -158,7 +158,7 @@ const SafeBikeApp = () => {
 					</ul>
 				</div>
 				<div className='w-full xl:w-1/2 px-6'>
-					<div className='relative w-full h-full hover:scale-110 hover:transition-all ease-in-out duration-500'>
+					<div className='relative w-full h-full md:hover:scale-[1.03] xl:hover:scale-110 hover:transition-all ease-in-out duration-500'>
 						<Image
 							src='/assets/images/mobile-app/safe-bike-app-3.png'
 							priority

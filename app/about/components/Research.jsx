@@ -14,7 +14,7 @@ const Research = () => {
 						color='text-accent'
 					/>
 					<div>
-						<p className='text-base md:text-lg p-3 bg-[#27272c] rounded-xl hover:scale-110 hover:transition-all ease-in-out duration-500'>
+						<p className='text-base md:text-lg p-3 bg-[#27272c] rounded-xl md:hover:scale-[1.03] xl:hover:scale-110 hover:transition-all ease-in-out duration-500'>
 							We conducted <span className='text-accent'>primary research</span>{' '}
 							in the form of{' '}
 							<span className='text-accent'>surveys and interviews</span> with
@@ -24,7 +24,7 @@ const Research = () => {
 						</p>
 					</div>
 					<div className='flex flex-col md:flex-row justify-center items-center gap-8 my-8'>
-						<div className='basis-full md:basis-1/3 p-3 md:h-96 lg:h-52 bg-[#27272c] rounded-xl flex flex-col hover:scale-110 hover:transition-all ease-in-out duration-500'>
+						<div className='basis-full md:basis-1/3 p-3 md:h-96 lg:h-60 bg-[#27272c] rounded-xl flex flex-col md:hover:scale-[1.03] xl:hover:scale-110 hover:transition-all ease-in-out duration-500'>
 							<span className='text-[#FFEA00] font-bold'>Safety Concerns </span>
 							<p className='text-white'>
 								Many cyclists reported feeling unsafe due to{' '}
@@ -33,7 +33,7 @@ const Research = () => {
 								<span className='text-accent'>inadequate signage</span>.
 							</p>
 						</div>
-						<div className='basis-full md:basis-1/3 p-3 md:h-96 lg:h-52 bg-[#27272c] rounded-xl flex flex-col hover:scale-110 hover:transition-all ease-in-out duration-500'>
+						<div className='basis-full md:basis-1/3 p-3 md:h-96 lg:h-60 bg-[#27272c] rounded-xl flex flex-col md:hover:scale-[1.03] xl:hover:scale-110 hover:transition-all ease-in-out duration-500'>
 							<span className='text-[#FFEA00] font-bold'>
 								Navigation Needs{' '}
 							</span>
@@ -44,7 +44,7 @@ const Research = () => {
 								<span className='text-accent'>reliable navigation tools</span>.
 							</p>
 						</div>
-						<div className='basis-full md:basis-1/3 p-3 md:h-96 lg:h-52 bg-[#27272c] rounded-xl flex flex-col hover:scale-110 hover:transition-all ease-in-out duration-500'>
+						<div className='basis-full md:basis-1/3 p-3 md:h-96 lg:h-60 bg-[#27272c] rounded-xl flex flex-col md:hover:scale-[1.03] xl:hover:scale-110 hover:transition-all ease-in-out duration-500'>
 							<span className='text-[#FFEA00] font-bold'>
 								Community Desire{' '}
 							</span>
@@ -67,7 +67,7 @@ const Research = () => {
 						color='text-accent'
 					/>
 					<div>
-						<p className='text-base md:text-lg p-3 bg-[#27272c] rounded-xl hover:scale-110 hover:transition-all ease-in-out duration-500'>
+						<p className='text-base md:text-lg p-3 bg-[#27272c] rounded-xl md:hover:scale-[1.03] xl:hover:scale-110 hover:transition-all ease-in-out duration-500'>
 							Our <span className='text-accent'>secondary research</span>{' '}
 							involved analyzing data from{' '}
 							<span className='text-accent'>government reports</span>,{' '}
@@ -77,7 +77,7 @@ const Research = () => {
 						</p>
 					</div>
 					<div className='flex flex-col md:flex-row justify-center items-center gap-8 my-8'>
-						<div className='basis-full md:basis-1/3 p-3 md:h-96 lg:h-52 bg-[#27272c] rounded-xl flex flex-col hover:scale-110 hover:transition-all ease-in-out duration-500'>
+						<div className='basis-full md:basis-1/3 p-3 md:h-96 lg:h-72 bg-[#27272c] rounded-xl flex flex-col md:hover:scale-[1.03] xl:hover:scale-110 hover:transition-all ease-in-out duration-500'>
 							<span className='text-[#FFEA00] font-bold'>
 								Increasing Cyclist Fatalities
 							</span>
@@ -89,7 +89,7 @@ const Research = () => {
 								<span className='text-accent'>e-bike users</span>.
 							</p>
 						</div>
-						<div className='basis-full md:basis-1/3 p-3 md:h-96 lg:h-52 bg-[#27272c] rounded-xl flex flex-col hover:scale-110 hover:transition-all ease-in-out duration-500'>
+						<div className='basis-full md:basis-1/3 p-3 md:h-96 lg:h-72 bg-[#27272c] rounded-xl flex flex-col md:hover:scale-[1.03] xl:hover:scale-110 hover:transition-all ease-in-out duration-500'>
 							<span className='text-[#FFEA00] font-bold'>
 								Tech-Savvy Cyclists
 							</span>
@@ -100,7 +100,7 @@ const Research = () => {
 								overall <span className='text-accent'>cycling experience</span>.
 							</p>
 						</div>
-						<div className='basis-full md:basis-1/3 p-3 md:h-96 lg:h-52 bg-[#27272c] rounded-xl flex flex-col hover:scale-110 hover:transition-all ease-in-out duration-500'>
+						<div className='basis-full md:basis-1/3 p-3 md:h-96 lg:h-72 bg-[#27272c] rounded-xl flex flex-col md:hover:scale-[1.03] xl:hover:scale-110 hover:transition-all ease-in-out duration-500'>
 							<span className='text-[#FFEA00] font-bold'>
 								Infrastructure Needs
 							</span>
